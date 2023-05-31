@@ -1,0 +1,1 @@
+Este archivo sirve para que la carpeta sea tenida en cuenta por git
