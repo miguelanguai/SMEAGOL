@@ -1,1 +1,2 @@
-Este archivo sirve para que la carpeta sea tenida en cuenta por git
+Este archivo sirve para que la carpeta sea tenida en cuenta por git.
+Cambio para el nuevo repositorio
