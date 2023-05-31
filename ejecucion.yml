@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    networks:
+      - my-network
+    environment:
+      - VARIABLE1=value1
+      - VARIABLE2=value2
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: mysql:latest
+    networks:
+      - my-network
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=mypassword
+    restart: always
+
+networks:
+  my-network:
+
